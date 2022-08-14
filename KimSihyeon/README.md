@@ -5,12 +5,14 @@
 
 ### New insights
 1. for문 대신 map() 함수를 적절히 이용해보기
-2. N개의 최소공배수
+2. N개의 최소공배수 : 2개의 최소공배수를 연속으로 구하는 방법 외에도,
 ```python
-i = max(array)
+m = max(arr)
+i = 1
 while True :
-    if all(i % a == 0 for a in array) :
-        break
-    else :
-        i += 1
+      if all(m % a == 0 for a in arr) :
+          break
+      else :
+          i += 1
+          m = max(arr)*i
 ```
