@@ -6,7 +6,7 @@
 ### New insights
 1. for문 대신 map() 함수를 적절히 이용해보기
 2. N개의 최소공배수
-'''python
+```python
 i = 1
 while True :
     MAX = max(array)
@@ -14,4 +14,4 @@ while True :
         break
     else :
         i += 1
-'''
+```
