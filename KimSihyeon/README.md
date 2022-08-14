@@ -7,10 +7,9 @@
 1. for문 대신 map() 함수를 적절히 이용해보기
 2. N개의 최소공배수
 ```python
-i = 1
+i = max(array)
 while True :
-    MAX = max(array)
-    if all(MAX*i % a == 0 for a in array) :
+    if all(i % a == 0 for a in array) :
         break
     else :
         i += 1
