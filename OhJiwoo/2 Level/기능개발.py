@@ -10,6 +10,7 @@ def solution(progresses, speeds):
             q.append(p)
     a=q[0]
     count=0
+    #시간 별로 배포 
     while q:
         qq=q.popleft()
         if a >= qq:
