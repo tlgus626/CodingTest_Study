@@ -4,6 +4,7 @@ def solution(record):
     records=[]
     for i in record :
         records.append(list(i.split()))
+    #딕셔너리 할당 
     for j in records :
         if j[0]=="Enter" or j[0]=="Change" :
             id[j[1]]=j[2]
