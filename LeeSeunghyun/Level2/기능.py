@@ -38,6 +38,6 @@ def solution(progresses, speeds):
 
             time += 1
 
-    answer.append(count)
+    answer.append(check)
 
     return answer
