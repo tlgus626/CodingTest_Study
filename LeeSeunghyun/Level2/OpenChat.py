@@ -11,7 +11,7 @@ def solution(record):
     for sentence in record:
         sentence_split = sentence.split()
         if len(sentence_split) == 3: # enter와 change의 경우만 다룸
-            dic[sentence_split[1]] = sentence_split[2]
+            dic[sentence_split[1]] = sentence_split[2] #{user id1 : 닉네임1, user id2 : 닉네임2, ... }
 
     #print
 
