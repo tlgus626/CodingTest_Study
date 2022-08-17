@@ -3,7 +3,7 @@ def solution(progresses, speeds):
 
     #변수설정
 
-    answer = []
+    result = []
     time = 0
     check = 0
 
@@ -33,11 +33,11 @@ def solution(progresses, speeds):
         else:
             if count > 0:
 
-                answer.append(count)
+                result.append(count)
                 check = 0
 
             time += 1
 
     answer.append(check)
 
-    return answer
+    return result
