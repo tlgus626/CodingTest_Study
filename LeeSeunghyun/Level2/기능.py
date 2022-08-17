@@ -5,7 +5,7 @@ def solution(progresses, speeds):
 
     answer = []
     time = 0
-    count = 0
+    check = 0
 
 
     ### 설명을 위한 입력값 설정 ###
@@ -28,13 +28,13 @@ def solution(progresses, speeds):
 
             progresses.pop(0) #progress에서 첫 번째 값이 없어짐. : pop
             speeds.pop(0)
-            count += 1
+            check += 1
 
         else:
             if count > 0:
 
                 answer.append(count)
-                count = 0
+                check = 0
 
             time += 1
 
