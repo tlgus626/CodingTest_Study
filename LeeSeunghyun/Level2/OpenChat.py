@@ -10,7 +10,7 @@ def solution(record):
 
     for sentence in record:
         sentence_split = sentence.split()
-        if len(sentence_split) == 3:
+        if len(sentence_split) == 3: # enter와 change의 경우만 다룸
             dic[sentence_split[1]] = sentence_split[2]
 
     #print
