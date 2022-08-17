@@ -26,7 +26,7 @@ def solution(progresses, speeds):
 
         if (progresses[0] + time * speeds[0]) >= 100:
 
-            progresses.pop(0)
+            progresses.pop(0) #progress에서 첫 번째 값이 없어짐. : pop
             speeds.pop(0)
             count += 1
 
