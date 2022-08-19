@@ -3,9 +3,9 @@ def solution(progresses, speeds):
 
     #변수설정
 
-    answer = []
+    result = []
     time = 0
-    count = 0
+    check = 0
 
 
     ### 설명을 위한 입력값 설정 ###
@@ -26,18 +26,18 @@ def solution(progresses, speeds):
 
         if (progresses[0] + time * speeds[0]) >= 100:
 
-            progresses.pop(0)
+            progresses.pop(0) #progress에서 첫 번째 값이 없어짐. : pop
             speeds.pop(0)
-            count += 1
+            check += 1
 
         else:
             if count > 0:
 
-                answer.append(count)
-                count = 0
+                result.append(count)
+                check = 0
 
             time += 1
 
-    answer.append(count)
+    answer.append(check)
 
-    return answer
+    return result

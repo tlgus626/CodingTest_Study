@@ -8,18 +8,21 @@ def solution(record):
     # 유저 닉네임을 변경하면 자동으로 수정 되도록 코드 구성 
     # -> 어차피 시계열로 순차적으로 데이터가 구성되어있기 때문에, dictionary가 최종 수정된 완성된 결과를 나타냄
 
+    #입력 예
+    #['enter uid1234 muzi', 'enter uid4576 prodo', ...]
+    
     for sentence in record:
-        sentence_split = sentence.split()
-        if len(sentence_split) == 3:
-            dic[sentence_split[1]] = sentence_split[2]
+        sentence_split = sentence.split() #list반환
+        if len(sentence_split) == 3: # enter와 change의 경우만 다룸
+            dic[sentence_split[1]] = sentence_split[2] #{user id1 : 닉네임1, user id2 : 닉네임2, ... }
 
     #print
 
     for sentence in record:
-        sentence_split = sentence.split()
-        if sentence_split[0] == 'Enter':
-            answer.append('%s님이 들어왔습니다.' % dic[sentence_split[1]])
-        elif sentence_split[0] == 'Leave':
+        sentence_split = sentence.split() #list반환
+        if sentence_split[0] == 'Leave':
             answer.append('%s님이 나갔습니다.' % dic[sentence_split[1]])
+        elif sentence_split[0] == 'Enter':
+            answer.append('%s님이 들어왔습니다.' % dic[sentence_split[1]])
 
     return (answer)
