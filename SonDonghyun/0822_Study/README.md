@@ -6,7 +6,7 @@
 #
 ### 2. 가장 큰 수
 ![programmers_level2_가장-큰-수_설명](https://user-images.githubusercontent.com/69744314/185778371-4ec0e0e3-e221-4fef-9306-eab6d30a135e.png)
-# 만들어진 리스트
+#### 만들어진 리스트
 ![programmers_level2_가장-큰-수_참고](https://user-images.githubusercontent.com/69744314/185778372-17823d74-f433-469f-a3f5-e41a791acc48.png)
 
 #
