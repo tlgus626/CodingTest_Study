@@ -26,3 +26,4 @@ def solution(numbers):
     # str(int()) 랑 비교했을 때 소요시간이 더 짧음.
     # return str(int(''.join(v)))
 ```
+5. defaultDict() : value를 따로 지정하지 않아도 0으로 채워줌
