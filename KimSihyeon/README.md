@@ -18,3 +18,11 @@ while True :
 ```
 3. 124나라의 숫자 원리
 ![world124](./img/world124.jpg)
+4. 가장 큰 수 : 모든 원소가 '0'이 아닌 이상 ''.
+```python
+def solution(numbers):
+    v = sorted(list(map(str,numbers)),key=lambda x: x*3,reverse=True)    
+    return ''.join(v) if not all(c == "0" for c in v) else "0"
+    # str(int()) 랑 비교했을 때 소요시간이 더 짧음.
+    # return str(int(''.join(v)))
+```
