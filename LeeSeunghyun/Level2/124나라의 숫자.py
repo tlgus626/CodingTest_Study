@@ -13,3 +13,17 @@ def solution(n):
             break
         x=x-1
     return answer[::-1] #나머지에 따라 저장된 값을 역순으로 출력 : 진법변환처럼
+
+
+### 모범답안 ###
+def change124(n):
+    num = ['1','2','4']
+    answer = ""
+
+
+    while n > 0:
+        n -= 1
+        answer = num[n % 3] + answer
+        n //= 3
+
+    return answer
