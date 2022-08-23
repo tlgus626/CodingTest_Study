@@ -5,3 +5,5 @@
   a. 좌우 방향으로 움직이는 횟수를 최소화해야 함  
   b. 그래프 이용해서 최단거리 탐색 using DFS  
   e.g., [A,B,A,B,A,A,A,A,A,B,A]
+![joystick1](./img/joystick1.jpg)
+![joystick2](./img/joystick2.jpg)
