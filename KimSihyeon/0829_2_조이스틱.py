@@ -21,6 +21,8 @@ def solution(name):
 
     def DFS(L, I, S):
         nonlocal MIN
+        if S > MIN :
+            return
         if L == len(elem):
             if S < MIN:
                 MIN = S
