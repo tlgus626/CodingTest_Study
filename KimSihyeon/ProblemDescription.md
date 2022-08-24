@@ -8,3 +8,9 @@
   e.g., [A,B,A,B,A,A,A,A,A,B,A]
 ![joystick1](./img/joystick1.jpg)
 ![joystick2](./img/joystick2.jpg)
+
+3. 문자열 압축  
+  a. 최대 압축 단위는 전체 문자열 길이의 절반  
+  e.g., 'abcabcdede' -> '2abcdede'  
+![strzip1](./img/strzip1.jpg)  
+![strzip2](./img/strzip2.jpg)
