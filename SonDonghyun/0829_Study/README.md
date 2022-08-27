@@ -2,12 +2,14 @@
 #
 ### 1. 프린터
 #### 큐
+![프린터](https://user-images.githubusercontent.com/69744314/186832984-bb6f9664-e835-43a1-85a2-9ae647d409b9.jpg)
+
 
 
 #
 ### 2. 전화번호 목록
 #### 해시
-
+![전화번호목록](https://user-images.githubusercontent.com/69744314/186832936-ef2e46aa-f4b2-49c3-a7e2-abcad67e65be.jpg)
 
 #
 ### 3. 문자열 압축
