@@ -7,8 +7,10 @@ def solution(s):
         answer =''
         count =1
         a=s[:i]
+        #i개씩 자름
         for j in range(i,len(s)+i,i):
             b=s[j:i+j]
+            #a==b가 같다면 count +1
             if a==b :
                 count +=1 
             else: 
