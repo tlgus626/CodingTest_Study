@@ -1,30 +1,38 @@
 def solution(name):
+    answer = 0
+    alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+             'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    
+    # up and down
+    for n in name:
+        answer += min(alpha.index(n), abs(alpha.index(n) - len(alpha)))
+    # left and right
+    elem = [i for i, n in enumerate(name) if i == 0 or n != 'A']
+    graph = [[0] * len(elem) for _ in range(len(elem))]
+    for i in range(len(elem)):
+        for j in range(len(elem)):
+            ## minimum distance btw elem[i] and elem[j]
+            graph[i][j] = graph[j][i] = min(abs(elem[i] - elem[j]),
+                                            abs(elem[i] - elem[j] + len(name)),
+                                            abs(elem[i] - elem[j] - len(name)))
+    # DFS
+    check = [0] * len(elem)
+    MIN = float('inf')
 
-    if set(name) == {'A'}:
-        return 0
+    def DFS(L, I, S):
+        nonlocal MIN
+        if S > MIN :
+            return
+        if L == len(elem):
+            if S < MIN:
+                MIN = S
+                return
+        else:
+            for i in range(len(elem)):
+                if check[i] == 0:
+                    check[i] = 1
+                    DFS(L + 1, i, S + graph[I][i])
+                    check[i] = 0
 
-    answer = float('inf')
-
-    # 한 쪽으로 갔다가 다시 반대쪽으로 움직였을 때를 고려하기 위한 반복
-    for i in range(len(name) // 2): # 고로 전체 문자열의 반 이상 움직일 필요 없음
-
-        left_moved = name[-i:] + name[:-i] # 왼쪽으로 이동하다가 오른쪽으로 이동하는 것을 고려하려고 사용
-        right_moved = name[i:] + name[:i] # 오른쪽으로 이동하다가 왼쪽으로 이동하는 것을 고려하려고 사용
-
-        # 왼->오, 오->왼을 모두 고려
-        for n in [left_moved, right_moved[0] + right_moved[:0:-1]]:
-
-            # 마지막 글자가 A가 아닐 때까지 우측에서 한칸씩 줄임
-            while n and n[-1] == 'A':
-                n = n[:-1]
-
-            row_move = i + len(n) - 1 # i는 한쪽으로 움직인 카운트, len(n) - 1이 다시 반대쪽으로 움직였을 때 카운트
-            
-            # 상하 움직임 카운트
-            col_move = 0
-            for c in map(ord, n):
-                col_move += min(c - 65, 91 - c)
-
-            answer = min(answer, row_move + col_move)
-
-    return answer
+    DFS(0, 0, 0)
+    return answer + MIN
