@@ -1,49 +1,16 @@
+#ㅅㅍ 모르겠다 뭔데이거
+
 def solution(name):
     answer = 0
-    name = list(name)
+    min_move = len(name) -1
+    for i in range(len(name)):
+        answer += min(ord(name[i])-ord("A"),ord("Z")+1-ord(name[i]))
     
-    shouldChange = 0
-    for n in name:
-        if n != 'A':
-            shouldChange += 1
-    
-    if not shouldChange:
-        return 0
-    
-    goLeft = 0
-    goRight = 0
-    index = 0
-    
-    while 1:
-        if name[index] != 'A':
-            answer += min(ord('Z') - ord(name[index]) + 1, ord(name[index]) - ord('A'))
-            
-            name[index] = 'A'
-            shouldChange -= 1
+        next = i + 1
+        while next < len(name) and name[next] == 'A':
+            next += 1
         
-        if not shouldChange:
-            break
-            
-        goLeft = goRight = index
-        move = 0
-
-        while 1:
-            goRight += 1
-            goLeft -= 1
-            move += 1
-
-            if goLeft < 0:
-                goLeft = len(name) - 1
-            if goRight > len(name) - 1:
-                goRight = 0
-
-            if name[goRight] != 'A':
-                answer += move
-                index = goRight
-                break
-            elif name[goLeft] != 'A':
-                answer += move
-                index = goLeft
-                break
-            
+        min_move = min([min_move, 2 *i + len(name) - next, i + 2 * (len(name) -next)])
+    answer += min_move
+    
     return answer
