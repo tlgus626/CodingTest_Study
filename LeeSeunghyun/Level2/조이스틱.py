@@ -1,4 +1,5 @@
 #ㅅㅍ 모르겠다 뭔데이거
+#내 코드 아니고 모범코드 가져옴
 
 def solution(name):
     answer = 0
