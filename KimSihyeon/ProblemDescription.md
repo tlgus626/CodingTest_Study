@@ -14,3 +14,6 @@
   e.g., 'abcabcdede' -> '2abcdede'  
 ![strzip1](./img/strzip1.jpg)  
 ![strzip2](./img/strzip2.jpg)
+
+### 올바른 괄호
+![right_bracket](./img/right_bracket.jpeg)
