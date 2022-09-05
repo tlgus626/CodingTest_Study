@@ -8,7 +8,7 @@ def solution(scoville, K):
         
     min_scov1 = heapq.heappop(scoville)
 
-    while len(scoville) >= 1:
+    while len(scoville) >= 2:
         min_scov2 = heapq.heappop(scoville)
         new_food = min_scov1 + min_scov2 * 2
 
