@@ -20,3 +20,6 @@
 
 ### 양궁대회 (DFS)
 ![arrow_dfs](./img/arrow_dfs.jpeg)
+
+### n^2 배열 자르기
+![cut_array](./img/cut_array.jpg)
