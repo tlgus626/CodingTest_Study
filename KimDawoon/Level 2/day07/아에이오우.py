@@ -10,7 +10,7 @@ def solution(word):
     return k
 
 
-# 진짜 
+# 진짜 속시원하다.
 from itertools import product
 
 def solution(word):
