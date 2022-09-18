@@ -25,4 +25,7 @@ def solution(numbers):
     # return str(int(''.join(v)))
 ```
 4. defaultDict() : value를 따로 지정하지 않아도 0으로 채워줌
-5. divmod(x, y) = (x//y, x%y)
+5. divmod()
+```python
+divmod(x,y) == (x//y, x%y)
+```
