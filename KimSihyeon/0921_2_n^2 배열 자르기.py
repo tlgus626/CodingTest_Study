@@ -5,7 +5,7 @@ def solution(n, left, right):
     return answer
 
 
-################### I want to know why is it wrong ###################
+################### my another solution ###################
 
 def myftn(n, x):
     res = [0] * n
@@ -21,15 +21,20 @@ def solution(n, left, right):
     sx, sy = divmod(left, n)
     ex, ey = divmod(right, n)
     answer = []
-    # start
-    start = myftn(n, sx)
-    for i in range(sy, n):
-        answer.append(start[i])
-    # middle
-    for i in range(sx + 1, ex):
-        answer.extend(myftn(n, i))
-    # end
-    end = myftn(n, ex)
-    for i in range(ey + 1):
-        answer.append(end[i])
+    if sx == ex:
+        onerow = myftn(n, sx)
+        for i in range(sy, ey + 1):
+            answer.append(onerow[i])
+    else:
+        # start
+        start = myftn(n, sx)
+        for i in range(sy, n):
+            answer.append(start[i])
+        # middle
+        for i in range(sx + 1, ex):
+            answer.extend(myftn(n, i))
+        # end
+        end = myftn(n, ex)
+        for i in range(ey + 1):
+            answer.append(end[i])
     return answer
