@@ -49,3 +49,9 @@ $$\sum_{i=0}^{3} 5^i$$
 $$\sum_{i=0}^{2} 5^i + \sum_{i=0}^{2} 5^i$$
 - O : 네 번째 글자 기준 'A'+'E'+'I' 로 시작하는 단어들을 다 지나쳐야 함
 $$\sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i$$
+
+### 카펫
+![carpet](./img/carpet.jpeg)
+
+### 순위 검색
+![rank_search](./img/rank_search.jpeg)
