@@ -52,8 +52,9 @@
     * 경우 2 : 해당 과녁에 어피치보다 딱 한 발 더 쏘기 i.e., (`i+1`,`어피치 i번째 점수에 +1한 리스트`) append
     * 왜 어피치보다 딱 한 발 더 쏴야하냐고??? 나도 몰라.. 같이 토의해줘
 3. queue에 더 이상 원소가 들어오지 않아서 `while`문이 끝남
-  - 점수 차이가 maximum value일 때의 라이언의 스코어(queue의 각 원소 중 두번째 값) 리스트 반환
-c.f., the performance of BFS is better than that of DFS.
+  - 점수 차이가 maximum value일 때의 라이언의 스코어(queue의 각 원소 중 두번째 값) 리스트 반환  
+
+c.f., The performance of BFS is better than that of DFS.
 ![arrow_performance_check](./img/arrow_performance_check.jpeg)
 
 ### n^2 배열 자르기
