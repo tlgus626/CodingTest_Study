@@ -91,3 +91,12 @@ $$\sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i$$
 
 ### 순위 검색
 ![rank_search](./img/rank_search.jpeg)
+
+### 경쟁적 전염
+1. BFS(`type`, `location_x`, `lcation_y`, `seconds`)
+2. 바이러스의 `type`을 기준으로 정렬하여 queue에 넣어줌. 그래야 `type` 순서대로 바이러스 증식 가능
+3. BFS
+    - dq.popleft()
+    - 만약 `seconds`가 목표 시간 `S`에 도달하면, while문을 멈추고 graph\[`X`]\[`Y`] 값 출력
+    - 아직 목표 시간 `S`가 아니면, 상/하/좌/우 중 아직 바이러스가 증식되지 않은 곳에 증식!
+    - dq.append(`동일한 type`, `새로운 location_x`, `새로운 location_y`, `seconds + 1`)
