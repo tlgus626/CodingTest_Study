@@ -102,6 +102,7 @@ $$\sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i$$
     - dq.append(`동일한 type`, `새로운 location_x`, `새로운 location_y`, `seconds + 1`)
 
 ### 인구 이동
+![move_population](./img/move_population.jpg)
 1. while문 안에서 연합 국가가 생성되면 BFS 수행. 연합 국가가 생성되지 않으면 while문 break
 2. BFS 시작하기 전에
     - 국가 중복 탐색을 방지하기 위한 visit matrix 생성
