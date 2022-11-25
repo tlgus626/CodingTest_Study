@@ -18,32 +18,33 @@ def process(x, y, index):
     united.append((x, y))
     
     q = deque()
-    q.append((x, y))
-    union[x][y] = index
+    q.append((x, y)) # 현재 연합 (시작 국가)
 
-    summary = graph[x][y]
-    count = 1
+    union[x][y] = index # 현재 연합의 번호
+    summary = graph[x][y] # 현재 연합의 전체 인구 수
+    count = 1 # 연합 내 국가의 수
 
-    while q:
-        x, y = q.popleft()
+    while q: # q가 빌 때까지
+        x, y = q.popleft() # 현재 연합 내 국가의 좌표
 
-        for i in range(4):
+        for i in range(4): # dfs로 사방으로 퍼져
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0 <= nx < n and 0 <= ny < n and union[nx][ny] == -1:
+            if 0 <= nx < n and 0 <= ny < n and union[nx][ny] == -1: # 설정 좌표 내
 
-                if l <= abs(graph[nx][ny] - graph[x][y]) <= r:
-                    q.append((nx, ny))
-                    union[nx][ny] = index
-                    summary += graph[nx][ny]
-                    count += 1
-                    united.append((nx, ny))
+                if l <= abs(graph[nx][ny] - graph[x][y]) <= r: # 차이가 l, r 사이이면
+                    q.append((nx, ny)) # 연합에 해당 나라 좌표 추가
+                    union[nx][ny] = index # 같은 연합 번호 부여
+                    summary += graph[nx][ny] # 연합의 인구 수도 sum
+                    count += 1 # 연합 국가 수도 sum
+                    united.append((nx, ny)) # 연합에 추가
     
+    # while문 다 돌면 인구 이동 시작
     for i, j in united:
-        graph[i][j] = summary // count
+        graph[i][j] = summary // count # 이미 저장해놓은 summary와 count로 평균 계산
     
-    return count
+    return count # 연합 내 국가 수를 return?
 
 total_count = 0
 
