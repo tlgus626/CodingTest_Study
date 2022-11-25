@@ -100,3 +100,27 @@ $$\sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i + \sum_{i=0}^{1} 5^i$$
     - 만약 `seconds`가 목표 시간 `S`에 도달하면, while문을 멈추고 graph\[`X`]\[`Y`] 값 출력
     - 아직 목표 시간 `S`가 아니면, 상/하/좌/우 중 아직 바이러스가 증식되지 않은 곳에 증식!
     - dq.append(`동일한 type`, `새로운 location_x`, `새로운 location_y`, `seconds + 1`)
+
+### 인구 이동
+![move_population](./img/move_population.jpg)
+1. while문 안에서 연합 국가가 생성되면 BFS 수행. 연합 국가가 생성되지 않으면 while문 break
+2. BFS 시작하기 전에
+    - 국가 중복 탐색을 방지하기 위한 visit matrix 생성
+    - 연합 국가 생성 여부를 판단하기 위한 boolean 변수 생성 (is_moved = False)
+3. BFS 시작
+    - 모든 국가를 탐색하다가 아직 방문하지 않은 국가가 발견되는 순간 BFS 시작!
+    - dq 생성하고 현재 국가 좌표 append
+    - 현재 국가 좌표 방문 처리
+    - union list 생성 : 연합 국가 좌표들 저장
+    - cnt 변수 생성 : 총 이동 인구 수 저장
+4. BFS(`now_x`, `now_y`)
+    - dq.popleft()
+    - 현재 좌표 기준 연합 국가 찾기 : 상하좌우 중 `L`<=difference<=`R`이면 연합 국가에 해당!
+    - dq.append((`new_x`, `new_y`))
+    - union.append((`new_x`, `new_y`))
+    - cnt += graph\[`new_x`]\[`new_y`]
+5. BFS가 끝나면 연합 국가들 인구 이동시키기
+    - graph\[`union_x`]\[`union_y`] = int(cnt/len(union))
+    - is_moved = True
+    - answer += 1
+6. BFS 다 끝났는데, is_moved = False이면? 더 이상 연합 국가가 생성되지 않음을 의미하므로 while문 break!
