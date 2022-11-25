@@ -46,6 +46,7 @@ def process(x, y, index):
     
     return count # 연합 내 국가 수를 return?
 
+################################################################
 total_count = 0
 
 while True:
