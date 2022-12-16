@@ -17,3 +17,6 @@ Weekly Feedback
 ### Week 09: [Study-1019](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1019_Study/1019.md)
 ### Week 10: [Study-1103](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1103_Study/1103.md)
 ### Week 11: [Study-1116](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1116_Study/1116.md)
+### Week 12: [Study-1125](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1125_Study/1125.md)
+### Week 13: [Study-1210](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1210Study/1210.md)
+### Week 14: [Study-1223](https://github.com/tlgus626/CodingTest_Study/blob/main/SonDonghyun/1223_Study/1223.md)
