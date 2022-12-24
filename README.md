@@ -1,5 +1,8 @@
 # CodingTest_Study
 
+## notion
+https://www.notion.so/Programming-Statistics-Study-08589f3994504fb5925e17de9a702237
+
 ## 코딩 스터디 규칙  
 #### 1. 스터디 날짜 : 매주 변동
 #### 2. 준비 : 각자 이름 폴더에 **스터디 시간 전**까지 풀이 업로드하기
